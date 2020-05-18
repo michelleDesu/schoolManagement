@@ -6,12 +6,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class StudentSequencerTest {
-    private StudentSequencer sq;
 
     @Before
     public void setUp() throws Exception {
-        sq = new StudentSequencer();
-        sq.resetID();
+
+        StudentSequencer.resetID();
         int nextId = StudentSequencer.nextID();
     }
 
@@ -24,7 +23,7 @@ public class StudentSequencerTest {
     @Test
     public void resetID_should_reset_id() {
         int expected = 1;
-        sq.resetID();
+        StudentSequencer.resetID();
         assertEquals(expected, StudentSequencer.nextID());
     }
 }

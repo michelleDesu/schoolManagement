@@ -27,6 +27,7 @@ public class Course {
         setStudents(students);
     }
 
+
     /**
      * registers a student to a course
      * @param student Student
