@@ -34,7 +34,6 @@ public class Course {
      */
     public void register(Student student){
         students.add(student);
-
     }
 
     /**
