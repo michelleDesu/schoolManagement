@@ -14,7 +14,7 @@ public class StudentSequencer {
     /**
      * for testing purposes
      */
-    public void resetID(){
+    public static void resetID(){
         studentID = 0;
     }
 }
