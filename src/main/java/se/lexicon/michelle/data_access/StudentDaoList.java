@@ -96,7 +96,7 @@ public class StudentDaoList implements StudentDao{
 
     /**
      * return the entire list of Students
-     * throws NullPointerException if student list is emppty
+     * throws NullPointerException if student list is null
      * @return List\<Student\>
      */
     @Override
