@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class StudentDaoList implements StudentDao{
-    private final List<Student> students;
+    private static List<Student> students;
 
     /**
      * default constructor
@@ -130,23 +130,20 @@ public class StudentDaoList implements StudentDao{
 
     /**
      * Overrides the equal
-     * @param o Object
+     * @param obj Object
      * @return boolean
      */
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        StudentDaoList that = (StudentDaoList) o;
-        return Objects.equals(students, that.students);
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 
     /**
-     * Overrides hashCode
+     * overrides the hashCode
      * @return int
      */
     @Override
     public int hashCode() {
-        return Objects.hash(students);
+        return super.hashCode();
     }
 }

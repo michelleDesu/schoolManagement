@@ -56,9 +56,8 @@ public class StudentDaoListTest {
         expected.saveStudent(third);
 
         students.saveStudent(third);
-        boolean actualExpected = expected.equals(students);
+        assertEquals(expected.findAll(), students.findAll());
 
-        assertTrue(actualExpected);
 
     }
     @Test(expected = IllegalArgumentException.class)
