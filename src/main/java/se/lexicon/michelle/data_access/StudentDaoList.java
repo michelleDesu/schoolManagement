@@ -1,6 +1,5 @@
 package se.lexicon.michelle.data_access;
 
-import se.lexicon.michelle.data.exceptions.StudentNotFoundException;
 import se.lexicon.michelle.model.Student;
 
 import java.util.ArrayList;
@@ -49,7 +48,7 @@ public class StudentDaoList implements StudentDao{
         }
         if (found == null){
             throw new NullPointerException("There are no student with that email address");
-            //throw new StudentNotFoundException("The specified student could not be found");
+
         }
         return found;
     }
@@ -91,7 +90,6 @@ public class StudentDaoList implements StudentDao{
         }
         if (found == null){
             throw new NullPointerException("The specified student does not exist");
-            //throw new StudentNotFoundException("The specified student could not be found");
         }
         return found;
     }
