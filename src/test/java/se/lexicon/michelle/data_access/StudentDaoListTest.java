@@ -128,17 +128,4 @@ public class StudentDaoListTest {
         assertFalse(students.deleteStudent(firstStudent));
     }
 
-    @Test
-    public void testEquals_and_hashcode() {
-
-        Student expected = new Student(
-                1 ,
-                "Eldbjörg",
-                "eldbjörg@test.com",
-                "Jorsala vägen 15B, 37254 testås"
-        );
-        assertTrue(expected.equals(firstStudent) && firstStudent.equals(expected));
-        assertEquals(expected.hashCode(), firstStudent.hashCode());
-
-    }
 }

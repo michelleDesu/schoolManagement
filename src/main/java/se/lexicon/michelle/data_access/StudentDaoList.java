@@ -128,22 +128,4 @@ public class StudentDaoList implements StudentDao{
 
     }
 
-    /**
-     * Overrides the equal
-     * @param obj Object
-     * @return boolean
-     */
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
-    /**
-     * overrides the hashCode
-     * @return int
-     */
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
 }
