@@ -17,7 +17,7 @@ public class StudentDaoListTest {
                             secondStudent;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         StudentSequencer.resetID();
         students = new StudentDaoList();
 
@@ -92,7 +92,7 @@ public class StudentDaoListTest {
     }
     @Test(expected =  NullPointerException.class)
     public void findByName_should_throw_NullPointerException(){
-        students.findByEmail( "");
+        students.findByName(null);
     }
 
     @Test

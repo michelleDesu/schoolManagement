@@ -17,7 +17,7 @@ public class CourseTest {
     private Student         firstStudent,
                             secondStudent;
     @Before
-    public void setUp() throws Exception {
+    public void setUp()  {
         date = LocalDate.of( 2020, 5, 18);
         students = new ArrayList<>();
 
@@ -83,7 +83,7 @@ public class CourseTest {
     @Test
     public void getCourseID() {
         int expected = 1;
-        assertEquals(expected, firstStudent.getStudentId());
+        assertEquals(expected, course.getCourseID());
     }
 
     @Test

@@ -25,7 +25,7 @@ public class CourseDaoListTest {
 
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         StudentSequencer.resetID();
         CourseSequencer.resetID();
         courses = new CourseDaoList();
@@ -126,6 +126,10 @@ public class CourseDaoListTest {
         expected.add(secondCourse);
 
         assertEquals(expected,courses.findByDate(date) );
+    }
+    @Test(expected =  IllegalArgumentException.class)
+    public void findByDate_should_throw_IllegalArgumentException(){
+        courses.findByDate(null);
     }
 
     @Test(expected =  NullPointerException.class)
